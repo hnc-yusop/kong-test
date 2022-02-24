@@ -1,9 +1,9 @@
 from flask import Flask
 app = Flask(__name__)
- 
-@app.route('/foo')
+
+@app.route('/api/getusers')
 def hello():
-    return '{"msg":"Hello from the foo microservice"}'
- 
+    return '[ {"user": "geert", "group": "admins"}, {"user": "bobby", "group": "users"} ]'
+
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
