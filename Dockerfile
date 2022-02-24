@@ -2,7 +2,9 @@ FROM python:3-alpine
 
 WORKDIR /app
 
-RUN echo "Flask==1.1.1" > requirements.txt
+RUN echo "Flask==1.1.2" > requirements.txt
+RUN echo "itsdangerous==2.0.1" >> requirements.txt
+
 RUN pip install -r requirements.txt
 COPY foo.py .
 
